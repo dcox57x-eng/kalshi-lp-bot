@@ -28,15 +28,16 @@ import argparse
 import logging
 import sys
 from pathlib import Path
+from typing import Optional
 
 from config import BotConfig
 from kalshi_client import KalshiClient
 from bot import LiquidityBot
 
 
-def setup_logging(level: str = "INFO", log_file: str = None):
+def setup_logging(level: str = "INFO", log_file: Optional[str] = None):
     """Configure logging for the bot."""
-    handlers = [logging.StreamHandler(sys.stdout)]
+    handlers: list[logging.Handler] = [logging.StreamHandler(sys.stdout)]
 
     if log_file:
         handlers.append(logging.FileHandler(log_file))
@@ -71,6 +72,12 @@ def parse_args():
         help="Specific market tickers to target",
     )
     parser.add_argument(
+        "--series",
+        nargs="+",
+        default=["KXBTC", "KXETH", "KXINX", "KXNASDAQ100"],
+        help="Market series to scan for auto-discovery (default: KXBTC KXETH KXINX KXNASDAQ100)",
+    )
+    parser.add_argument(
         "--budget",
         type=float,
         default=100.0,
@@ -89,10 +96,52 @@ def parse_args():
         help="Max acceptable overpayment per share in cents (default: 3)",
     )
     parser.add_argument(
+        "--max-hedges",
+        type=int,
+        default=4,
+        help="Max simultaneous active hedges (default: 4)",
+    )
+    parser.add_argument(
+        "--min-bids",
+        type=int,
+        default=2,
+        help="Min resting bids required on each side of book (default: 2)",
+    )
+    parser.add_argument(
         "--poll",
         type=float,
         default=5.0,
         help="Poll interval in seconds (default: 5)",
+    )
+    parser.add_argument(
+        "--kelly-alpha",
+        type=float,
+        default=0.25,
+        help="Fractional Kelly multiplier α (default: 0.25, NEVER use 1.0)",
+    )
+    parser.add_argument(
+        "--max-exposure",
+        type=float,
+        default=50.0,
+        help="Maximum exposure in dollars (default: $50)",
+    )
+    parser.add_argument(
+        "--max-drawdown",
+        type=float,
+        default=0.08,
+        help="Max drawdown before halt, as decimal (default: 0.08 = 8%%)",
+    )
+    parser.add_argument(
+        "--max-consec-losses",
+        type=int,
+        default=2,
+        help="Halt after N consecutive losses (default: 2)",
+    )
+    parser.add_argument(
+        "--daily-var-limit",
+        type=float,
+        default=20.0,
+        help="Daily VaR loss limit in dollars (default: $20)",
     )
     parser.add_argument(
         "--log-level",
@@ -126,10 +175,18 @@ def main():
     config = BotConfig()
     config.dry_run = not args.live
     config.target_tickers = args.tickers
+    config.target_series = args.series
     config.capital.total_budget_cents = int(args.budget * 100)
     config.capital.contracts_per_order = args.contracts
     config.hedge.delta_max_cents = args.delta_max
+    config.market_selection.max_active_hedges = args.max_hedges
+    config.market_selection.min_bids_each_side = args.min_bids
     config.poll_interval_seconds = args.poll
+    config.capital.fractional_kelly_alpha = args.kelly_alpha
+    config.capital.max_exposure_cents = int(args.max_exposure * 100)
+    config.risk.max_drawdown_pct = args.max_drawdown
+    config.risk.max_consecutive_losses = args.max_consec_losses
+    config.risk.daily_var_limit_cents = int(args.daily_var_limit * 100)
     config.log_level = args.log_level
     config.log_file = args.log_file
 

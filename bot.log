@@ -1,0 +1,778 @@
+2026-05-29 12:09:24 [INFO   ] main: Starting bot...
+2026-05-29 12:09:24 [INFO   ] bot: ============================================================
+2026-05-29 12:09:24 [INFO   ] bot:   OPTIMUS v3 — Hedged Liquidity Bot + Risk Engine
+2026-05-29 12:09:24 [INFO   ] bot: ============================================================
+2026-05-29 12:09:24 [INFO   ] bot:   Mode:        DRY RUN
+2026-05-29 12:09:24 [INFO   ] bot:   Environment: https://api.elections.kalshi.com
+2026-05-29 12:09:24 [INFO   ] bot:   Budget:      10000¢ ($100.00)
+2026-05-29 12:09:24 [INFO   ] bot:   Δ_max:       3¢
+2026-05-29 12:09:24 [INFO   ] bot:   Kelly α:     0.25 (fractional)
+2026-05-29 12:09:24 [INFO   ] bot:   Max Expose:  5000¢ ($50.00)
+2026-05-29 12:09:24 [INFO   ] bot:   Poll:        5.0s
+2026-05-29 12:09:24 [INFO   ] bot:   MDD Limit:   8%
+2026-05-29 12:09:24 [INFO   ] bot:   VaR Limit:   2000¢/day
+2026-05-29 12:09:24 [INFO   ] bot:   Loss Halt:   2 consecutive
+2026-05-29 12:09:24 [INFO   ] bot:   Series:      KXBTC, KXETH
+2026-05-29 12:09:24 [INFO   ] bot:   Mode:        Auto-discover best markets
+2026-05-29 12:09:24 [INFO   ] bot: ============================================================
+2026-05-29 12:09:24 [INFO   ] bot: Scanning markets across series: KXBTC, KXETH
+2026-05-29 12:09:25 [DEBUG  ] bot:   KXBTC: found 100 open markets
+2026-05-29 12:09:25 [DEBUG  ] bot: KXBTC-26MAY2913-T82299.99: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:25 [DEBUG  ] bot: KXBTC-26MAY2913-T82299.99: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:25 [DEBUG  ] bot:   KXBTC-26MAY2913-T82299.99: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:25 [DEBUG  ] bot: KXBTC-26MAY2913-T63700: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:25 [DEBUG  ] bot: KXBTC-26MAY2913-T63700: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:25 [DEBUG  ] bot:   KXBTC-26MAY2913-T63700: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:25 [DEBUG  ] bot: KXBTC-26MAY2913-B82250: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:25 [DEBUG  ] bot: KXBTC-26MAY2913-B82250: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:25 [DEBUG  ] bot:   KXBTC-26MAY2913-B82250: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:25 [DEBUG  ] bot: KXBTC-26MAY2913-B82150: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:25 [DEBUG  ] bot: KXBTC-26MAY2913-B82150: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:25 [DEBUG  ] bot:   KXBTC-26MAY2913-B82150: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:25 [DEBUG  ] bot: KXBTC-26MAY2913-B82050: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:25 [DEBUG  ] bot: KXBTC-26MAY2913-B82050: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:25 [DEBUG  ] bot:   KXBTC-26MAY2913-B82050: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:25 [DEBUG  ] bot: KXBTC-26MAY2913-B81950: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:25 [DEBUG  ] bot: KXBTC-26MAY2913-B81950: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:25 [DEBUG  ] bot:   KXBTC-26MAY2913-B81950: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:25 [DEBUG  ] bot: KXBTC-26MAY2913-B81850: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:25 [DEBUG  ] bot: KXBTC-26MAY2913-B81850: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:25 [DEBUG  ] bot:   KXBTC-26MAY2913-B81850: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:25 [DEBUG  ] bot: KXBTC-26MAY2913-B81750: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:25 [DEBUG  ] bot: KXBTC-26MAY2913-B81750: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:25 [DEBUG  ] bot:   KXBTC-26MAY2913-B81750: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:25 [DEBUG  ] bot: KXBTC-26MAY2913-B81650: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:25 [DEBUG  ] bot: KXBTC-26MAY2913-B81650: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:25 [DEBUG  ] bot:   KXBTC-26MAY2913-B81650: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:25 [DEBUG  ] bot: KXBTC-26MAY2913-B81550: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:25 [DEBUG  ] bot: KXBTC-26MAY2913-B81550: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:25 [DEBUG  ] bot:   KXBTC-26MAY2913-B81550: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:25 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.23s
+2026-05-29 12:09:26 [DEBUG  ] bot: KXBTC-26MAY2913-B81450: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:26 [DEBUG  ] bot: KXBTC-26MAY2913-B81450: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:26 [DEBUG  ] bot:   KXBTC-26MAY2913-B81450: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:26 [DEBUG  ] bot: KXBTC-26MAY2913-B81350: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:26 [DEBUG  ] bot: KXBTC-26MAY2913-B81350: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:26 [DEBUG  ] bot:   KXBTC-26MAY2913-B81350: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:26 [DEBUG  ] bot: KXBTC-26MAY2913-B81250: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:26 [DEBUG  ] bot: KXBTC-26MAY2913-B81250: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:26 [DEBUG  ] bot:   KXBTC-26MAY2913-B81250: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:26 [DEBUG  ] bot: KXBTC-26MAY2913-B81150: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:26 [DEBUG  ] bot: KXBTC-26MAY2913-B81150: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:26 [DEBUG  ] bot:   KXBTC-26MAY2913-B81150: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:26 [DEBUG  ] bot: KXBTC-26MAY2913-B81050: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:26 [DEBUG  ] bot: KXBTC-26MAY2913-B81050: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:26 [DEBUG  ] bot:   KXBTC-26MAY2913-B81050: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:26 [DEBUG  ] bot: KXBTC-26MAY2913-B80950: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:26 [DEBUG  ] bot: KXBTC-26MAY2913-B80950: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:26 [DEBUG  ] bot:   KXBTC-26MAY2913-B80950: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:26 [DEBUG  ] bot: KXBTC-26MAY2913-B80850: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:26 [DEBUG  ] bot: KXBTC-26MAY2913-B80850: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:26 [DEBUG  ] bot:   KXBTC-26MAY2913-B80850: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:26 [DEBUG  ] bot: KXBTC-26MAY2913-B80750: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:26 [DEBUG  ] bot: KXBTC-26MAY2913-B80750: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:26 [DEBUG  ] bot:   KXBTC-26MAY2913-B80750: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:26 [DEBUG  ] bot: KXBTC-26MAY2913-B80650: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:26 [DEBUG  ] bot: KXBTC-26MAY2913-B80650: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:26 [DEBUG  ] bot:   KXBTC-26MAY2913-B80650: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:26 [DEBUG  ] bot: KXBTC-26MAY2913-B80550: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:26 [DEBUG  ] bot: KXBTC-26MAY2913-B80550: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:26 [DEBUG  ] bot:   KXBTC-26MAY2913-B80550: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:26 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.14s
+2026-05-29 12:09:27 [DEBUG  ] bot: KXBTC-26MAY2913-B80450: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:27 [DEBUG  ] bot: KXBTC-26MAY2913-B80450: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:27 [DEBUG  ] bot:   KXBTC-26MAY2913-B80450: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:27 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.02s
+2026-05-29 12:09:27 [DEBUG  ] bot: KXBTC-26MAY2913-B80350: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:27 [DEBUG  ] bot: KXBTC-26MAY2913-B80350: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:27 [DEBUG  ] bot:   KXBTC-26MAY2913-B80350: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:27 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.02s
+2026-05-29 12:09:27 [DEBUG  ] bot: KXBTC-26MAY2913-B80250: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:27 [DEBUG  ] bot: KXBTC-26MAY2913-B80250: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:27 [DEBUG  ] bot:   KXBTC-26MAY2913-B80250: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:27 [DEBUG  ] bot: KXBTC-26MAY2913-B80150: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:27 [DEBUG  ] bot: KXBTC-26MAY2913-B80150: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:27 [DEBUG  ] bot:   KXBTC-26MAY2913-B80150: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:27 [DEBUG  ] bot: KXBTC-26MAY2913-B80050: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:27 [DEBUG  ] bot: KXBTC-26MAY2913-B80050: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:27 [DEBUG  ] bot:   KXBTC-26MAY2913-B80050: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:27 [DEBUG  ] bot: KXBTC-26MAY2913-B79950: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:27 [DEBUG  ] bot: KXBTC-26MAY2913-B79950: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:27 [DEBUG  ] bot:   KXBTC-26MAY2913-B79950: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:27 [DEBUG  ] bot: KXBTC-26MAY2913-B79850: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:27 [DEBUG  ] bot: KXBTC-26MAY2913-B79850: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:27 [DEBUG  ] bot:   KXBTC-26MAY2913-B79850: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:27 [DEBUG  ] bot: KXBTC-26MAY2913-B79750: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:27 [DEBUG  ] bot: KXBTC-26MAY2913-B79750: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:27 [DEBUG  ] bot:   KXBTC-26MAY2913-B79750: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:27 [DEBUG  ] bot: KXBTC-26MAY2913-B79650: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:27 [DEBUG  ] bot: KXBTC-26MAY2913-B79650: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:27 [DEBUG  ] bot:   KXBTC-26MAY2913-B79650: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:28 [DEBUG  ] bot: KXBTC-26MAY2913-B79550: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:28 [DEBUG  ] bot: KXBTC-26MAY2913-B79550: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:28 [DEBUG  ] bot:   KXBTC-26MAY2913-B79550: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:28 [DEBUG  ] bot: KXBTC-26MAY2913-B79450: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:28 [DEBUG  ] bot: KXBTC-26MAY2913-B79450: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:28 [DEBUG  ] bot:   KXBTC-26MAY2913-B79450: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:28 [DEBUG  ] bot: KXBTC-26MAY2913-B79350: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:28 [DEBUG  ] bot: KXBTC-26MAY2913-B79350: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:28 [DEBUG  ] bot:   KXBTC-26MAY2913-B79350: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:28 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.01s
+2026-05-29 12:09:28 [DEBUG  ] bot: KXBTC-26MAY2913-B79250: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:28 [DEBUG  ] bot: KXBTC-26MAY2913-B79250: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:28 [DEBUG  ] bot:   KXBTC-26MAY2913-B79250: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:28 [DEBUG  ] bot: KXBTC-26MAY2913-B79150: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:28 [DEBUG  ] bot: KXBTC-26MAY2913-B79150: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:28 [DEBUG  ] bot:   KXBTC-26MAY2913-B79150: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:28 [DEBUG  ] bot: KXBTC-26MAY2913-B79050: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:28 [DEBUG  ] bot: KXBTC-26MAY2913-B79050: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:28 [DEBUG  ] bot:   KXBTC-26MAY2913-B79050: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:28 [DEBUG  ] bot: KXBTC-26MAY2913-B78950: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:28 [DEBUG  ] bot: KXBTC-26MAY2913-B78950: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:28 [DEBUG  ] bot:   KXBTC-26MAY2913-B78950: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:28 [DEBUG  ] bot: KXBTC-26MAY2913-B78850: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:28 [DEBUG  ] bot: KXBTC-26MAY2913-B78850: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:28 [DEBUG  ] bot:   KXBTC-26MAY2913-B78850: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:28 [DEBUG  ] bot: KXBTC-26MAY2913-B78750: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:28 [DEBUG  ] bot: KXBTC-26MAY2913-B78750: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:28 [DEBUG  ] bot:   KXBTC-26MAY2913-B78750: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:28 [DEBUG  ] bot: KXBTC-26MAY2913-B78650: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:28 [DEBUG  ] bot: KXBTC-26MAY2913-B78650: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:28 [DEBUG  ] bot:   KXBTC-26MAY2913-B78650: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:28 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.01s
+2026-05-29 12:09:29 [DEBUG  ] bot: KXBTC-26MAY2913-B78550: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:29 [DEBUG  ] bot: KXBTC-26MAY2913-B78550: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:29 [DEBUG  ] bot:   KXBTC-26MAY2913-B78550: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:29 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.10s
+2026-05-29 12:09:29 [DEBUG  ] bot: KXBTC-26MAY2913-B78450: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:29 [DEBUG  ] bot: KXBTC-26MAY2913-B78450: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:29 [DEBUG  ] bot:   KXBTC-26MAY2913-B78450: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:29 [DEBUG  ] bot: KXBTC-26MAY2913-B78350: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:29 [DEBUG  ] bot: KXBTC-26MAY2913-B78350: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:29 [DEBUG  ] bot:   KXBTC-26MAY2913-B78350: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:29 [DEBUG  ] bot: KXBTC-26MAY2913-B78250: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:29 [DEBUG  ] bot: KXBTC-26MAY2913-B78250: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:29 [DEBUG  ] bot:   KXBTC-26MAY2913-B78250: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:29 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.04s
+2026-05-29 12:09:29 [DEBUG  ] bot: KXBTC-26MAY2913-B78150: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:29 [DEBUG  ] bot: KXBTC-26MAY2913-B78150: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:29 [DEBUG  ] bot:   KXBTC-26MAY2913-B78150: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:29 [DEBUG  ] bot: KXBTC-26MAY2913-B78050: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:29 [DEBUG  ] bot: KXBTC-26MAY2913-B78050: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:29 [DEBUG  ] bot:   KXBTC-26MAY2913-B78050: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:29 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.05s
+2026-05-29 12:09:29 [DEBUG  ] bot: KXBTC-26MAY2913-B77950: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:29 [DEBUG  ] bot: KXBTC-26MAY2913-B77950: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:29 [DEBUG  ] bot:   KXBTC-26MAY2913-B77950: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:29 [DEBUG  ] bot: KXBTC-26MAY2913-B77850: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:29 [DEBUG  ] bot: KXBTC-26MAY2913-B77850: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:29 [DEBUG  ] bot:   KXBTC-26MAY2913-B77850: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:29 [DEBUG  ] bot: KXBTC-26MAY2913-B77750: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:29 [DEBUG  ] bot: KXBTC-26MAY2913-B77750: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:29 [DEBUG  ] bot:   KXBTC-26MAY2913-B77750: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:30 [DEBUG  ] bot: KXBTC-26MAY2913-B77650: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:30 [DEBUG  ] bot: KXBTC-26MAY2913-B77650: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:30 [DEBUG  ] bot:   KXBTC-26MAY2913-B77650: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:30 [DEBUG  ] bot: KXBTC-26MAY2913-B77550: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:30 [DEBUG  ] bot: KXBTC-26MAY2913-B77550: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:30 [DEBUG  ] bot:   KXBTC-26MAY2913-B77550: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:30 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.01s
+2026-05-29 12:09:30 [DEBUG  ] bot: KXBTC-26MAY2913-B77450: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:30 [DEBUG  ] bot: KXBTC-26MAY2913-B77450: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:30 [DEBUG  ] bot:   KXBTC-26MAY2913-B77450: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:30 [DEBUG  ] bot: KXBTC-26MAY2913-B77350: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:30 [DEBUG  ] bot: KXBTC-26MAY2913-B77350: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:30 [DEBUG  ] bot:   KXBTC-26MAY2913-B77350: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:30 [DEBUG  ] bot: KXBTC-26MAY2913-B77250: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:30 [DEBUG  ] bot: KXBTC-26MAY2913-B77250: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:30 [DEBUG  ] bot:   KXBTC-26MAY2913-B77250: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:30 [DEBUG  ] bot: KXBTC-26MAY2913-B77150: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:30 [DEBUG  ] bot: KXBTC-26MAY2913-B77150: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:30 [DEBUG  ] bot:   KXBTC-26MAY2913-B77150: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:30 [DEBUG  ] bot: KXBTC-26MAY2913-B77050: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:30 [DEBUG  ] bot: KXBTC-26MAY2913-B77050: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:30 [DEBUG  ] bot:   KXBTC-26MAY2913-B77050: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:30 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.06s
+2026-05-29 12:09:30 [DEBUG  ] bot: KXBTC-26MAY2913-B76950: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:30 [DEBUG  ] bot: KXBTC-26MAY2913-B76950: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:30 [DEBUG  ] bot:   KXBTC-26MAY2913-B76950: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:30 [DEBUG  ] bot: KXBTC-26MAY2913-B76850: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:30 [DEBUG  ] bot: KXBTC-26MAY2913-B76850: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:30 [DEBUG  ] bot:   KXBTC-26MAY2913-B76850: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:30 [DEBUG  ] bot: KXBTC-26MAY2913-B76750: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:30 [DEBUG  ] bot: KXBTC-26MAY2913-B76750: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:30 [DEBUG  ] bot:   KXBTC-26MAY2913-B76750: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:31 [DEBUG  ] bot: KXBTC-26MAY2913-B76650: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:31 [DEBUG  ] bot: KXBTC-26MAY2913-B76650: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:31 [DEBUG  ] bot:   KXBTC-26MAY2913-B76650: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:31 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.01s
+2026-05-29 12:09:31 [DEBUG  ] bot: KXBTC-26MAY2913-B76550: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:31 [DEBUG  ] bot: KXBTC-26MAY2913-B76550: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:31 [DEBUG  ] bot:   KXBTC-26MAY2913-B76550: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:31 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.01s
+2026-05-29 12:09:31 [DEBUG  ] bot: KXBTC-26MAY2913-B76450: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:31 [DEBUG  ] bot: KXBTC-26MAY2913-B76450: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:31 [DEBUG  ] bot:   KXBTC-26MAY2913-B76450: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:31 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.01s
+2026-05-29 12:09:31 [DEBUG  ] bot: KXBTC-26MAY2913-B76350: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:31 [DEBUG  ] bot: KXBTC-26MAY2913-B76350: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:31 [DEBUG  ] bot:   KXBTC-26MAY2913-B76350: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:31 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.01s
+2026-05-29 12:09:31 [DEBUG  ] bot: KXBTC-26MAY2913-B76250: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:31 [DEBUG  ] bot: KXBTC-26MAY2913-B76250: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:31 [DEBUG  ] bot:   KXBTC-26MAY2913-B76250: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:31 [DEBUG  ] bot: KXBTC-26MAY2913-B76150: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:31 [DEBUG  ] bot: KXBTC-26MAY2913-B76150: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:31 [DEBUG  ] bot:   KXBTC-26MAY2913-B76150: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:31 [DEBUG  ] bot: KXBTC-26MAY2913-B76050: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:31 [DEBUG  ] bot: KXBTC-26MAY2913-B76050: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:31 [DEBUG  ] bot:   KXBTC-26MAY2913-B76050: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:31 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.04s
+2026-05-29 12:09:31 [DEBUG  ] bot: KXBTC-26MAY2913-B75950: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:31 [DEBUG  ] bot: KXBTC-26MAY2913-B75950: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:31 [DEBUG  ] bot:   KXBTC-26MAY2913-B75950: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:31 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.01s
+2026-05-29 12:09:31 [DEBUG  ] bot: KXBTC-26MAY2913-B75850: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:31 [DEBUG  ] bot: KXBTC-26MAY2913-B75850: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:31 [DEBUG  ] bot:   KXBTC-26MAY2913-B75850: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:31 [DEBUG  ] bot: KXBTC-26MAY2913-B75750: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:31 [DEBUG  ] bot: KXBTC-26MAY2913-B75750: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:31 [DEBUG  ] bot:   KXBTC-26MAY2913-B75750: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:32 [DEBUG  ] bot: KXBTC-26MAY2913-B75650: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:32 [DEBUG  ] bot: KXBTC-26MAY2913-B75650: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:32 [DEBUG  ] bot:   KXBTC-26MAY2913-B75650: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:32 [DEBUG  ] bot: KXBTC-26MAY2913-B75550: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:32 [DEBUG  ] bot: KXBTC-26MAY2913-B75550: parsed 6 no bids from 6 raw entries
+2026-05-29 12:09:32 [DEBUG  ] bot:   KXBTC-26MAY2913-B75550: skipping — thin/one-sided book (yes=0, no=6)
+2026-05-29 12:09:32 [DEBUG  ] bot: KXBTC-26MAY2913-B75450: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:32 [DEBUG  ] bot: KXBTC-26MAY2913-B75450: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:32 [DEBUG  ] bot:   KXBTC-26MAY2913-B75450: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:32 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.06s
+2026-05-29 12:09:32 [DEBUG  ] bot: KXBTC-26MAY2913-B75350: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:32 [DEBUG  ] bot: KXBTC-26MAY2913-B75350: parsed 6 no bids from 6 raw entries
+2026-05-29 12:09:32 [DEBUG  ] bot:   KXBTC-26MAY2913-B75350: skipping — thin/one-sided book (yes=0, no=6)
+2026-05-29 12:09:32 [DEBUG  ] bot: KXBTC-26MAY2913-B75250: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:32 [DEBUG  ] bot: KXBTC-26MAY2913-B75250: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:32 [DEBUG  ] bot:   KXBTC-26MAY2913-B75250: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:32 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.00s
+2026-05-29 12:09:32 [DEBUG  ] bot: KXBTC-26MAY2913-B75150: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:32 [DEBUG  ] bot: KXBTC-26MAY2913-B75150: parsed 6 no bids from 6 raw entries
+2026-05-29 12:09:32 [DEBUG  ] bot:   KXBTC-26MAY2913-B75150: skipping — thin/one-sided book (yes=0, no=6)
+2026-05-29 12:09:32 [DEBUG  ] bot: KXBTC-26MAY2913-B75050: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:32 [DEBUG  ] bot: KXBTC-26MAY2913-B75050: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:32 [DEBUG  ] bot:   KXBTC-26MAY2913-B75050: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:32 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.05s
+2026-05-29 12:09:32 [DEBUG  ] bot: KXBTC-26MAY2913-B74950: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:32 [DEBUG  ] bot: KXBTC-26MAY2913-B74950: parsed 6 no bids from 6 raw entries
+2026-05-29 12:09:32 [DEBUG  ] bot:   KXBTC-26MAY2913-B74950: skipping — thin/one-sided book (yes=0, no=6)
+2026-05-29 12:09:32 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.07s
+2026-05-29 12:09:32 [DEBUG  ] bot: KXBTC-26MAY2913-B74850: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:32 [DEBUG  ] bot: KXBTC-26MAY2913-B74850: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:32 [DEBUG  ] bot:   KXBTC-26MAY2913-B74850: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:32 [DEBUG  ] bot: KXBTC-26MAY2913-B74750: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:32 [DEBUG  ] bot: KXBTC-26MAY2913-B74750: parsed 6 no bids from 6 raw entries
+2026-05-29 12:09:32 [DEBUG  ] bot:   KXBTC-26MAY2913-B74750: skipping — thin/one-sided book (yes=0, no=6)
+2026-05-29 12:09:32 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.00s
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B74650: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B74650: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:33 [DEBUG  ] bot:   KXBTC-26MAY2913-B74650: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B74550: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B74550: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:33 [DEBUG  ] bot:   KXBTC-26MAY2913-B74550: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B74450: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B74450: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:33 [DEBUG  ] bot:   KXBTC-26MAY2913-B74450: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:33 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.02s
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B74350: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B74350: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:33 [DEBUG  ] bot:   KXBTC-26MAY2913-B74350: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B74250: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B74250: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:33 [DEBUG  ] bot:   KXBTC-26MAY2913-B74250: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B74150: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B74150: parsed 3 yes bids from 3 raw entries
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B74150: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B74050: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B74050: parsed 6 yes bids from 6 raw entries
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B74050: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B73950: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B73950: parsed 8 yes bids from 8 raw entries
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B73950: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:33 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.07s
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B73850: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B73850: parsed 9 yes bids from 9 raw entries
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B73850: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B73750: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B73750: parsed 8 yes bids from 8 raw entries
+2026-05-29 12:09:33 [DEBUG  ] bot: KXBTC-26MAY2913-B73750: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:34 [DEBUG  ] bot: KXBTC-26MAY2913-B73650: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:34 [DEBUG  ] bot: KXBTC-26MAY2913-B73650: parsed 8 yes bids from 8 raw entries
+2026-05-29 12:09:34 [DEBUG  ] bot: KXBTC-26MAY2913-B73650: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:34 [DEBUG  ] bot: KXBTC-26MAY2913-B73550: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:34 [DEBUG  ] bot: KXBTC-26MAY2913-B73550: parsed 4 yes bids from 4 raw entries
+2026-05-29 12:09:34 [DEBUG  ] bot: KXBTC-26MAY2913-B73550: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:34 [DEBUG  ] bot: KXBTC-26MAY2913-B73450: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:34 [DEBUG  ] bot: KXBTC-26MAY2913-B73450: parsed 3 yes bids from 3 raw entries
+2026-05-29 12:09:34 [DEBUG  ] bot: KXBTC-26MAY2913-B73450: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:34 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.04s
+2026-05-29 12:09:34 [DEBUG  ] bot: KXBTC-26MAY2913-B73350: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:34 [DEBUG  ] bot: KXBTC-26MAY2913-B73350: parsed 1 yes bids from 1 raw entries
+2026-05-29 12:09:34 [DEBUG  ] bot: KXBTC-26MAY2913-B73350: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:34 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.04s
+2026-05-29 12:09:34 [DEBUG  ] bot: KXBTC-26MAY2913-B73250: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:34 [DEBUG  ] bot: KXBTC-26MAY2913-B73250: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:34 [DEBUG  ] bot:   KXBTC-26MAY2913-B73250: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:34 [DEBUG  ] bot: KXBTC-26MAY2913-B73150: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:34 [DEBUG  ] bot: KXBTC-26MAY2913-B73150: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:34 [DEBUG  ] bot:   KXBTC-26MAY2913-B73150: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:34 [DEBUG  ] bot: KXBTC-26MAY2913-B73050: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:34 [DEBUG  ] bot: KXBTC-26MAY2913-B73050: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:34 [DEBUG  ] bot:   KXBTC-26MAY2913-B73050: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:34 [DEBUG  ] bot: KXBTC-26MAY2913-B72950: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:34 [DEBUG  ] bot: KXBTC-26MAY2913-B72950: parsed 6 no bids from 6 raw entries
+2026-05-29 12:09:34 [DEBUG  ] bot:   KXBTC-26MAY2913-B72950: skipping — thin/one-sided book (yes=0, no=6)
+2026-05-29 12:09:34 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.03s
+2026-05-29 12:09:34 [DEBUG  ] bot: KXBTC-26MAY2913-B72850: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:34 [DEBUG  ] bot: KXBTC-26MAY2913-B72850: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:34 [DEBUG  ] bot:   KXBTC-26MAY2913-B72850: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:35 [DEBUG  ] bot: KXBTC-26MAY2913-B72750: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:35 [DEBUG  ] bot: KXBTC-26MAY2913-B72750: parsed 5 no bids from 5 raw entries
+2026-05-29 12:09:35 [DEBUG  ] bot:   KXBTC-26MAY2913-B72750: skipping — thin/one-sided book (yes=0, no=5)
+2026-05-29 12:09:35 [DEBUG  ] bot: KXBTC-26MAY2913-B72650: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:35 [DEBUG  ] bot: KXBTC-26MAY2913-B72650: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:35 [DEBUG  ] bot:   KXBTC-26MAY2913-B72650: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:35 [DEBUG  ] bot: KXBTC-26MAY2913-B72550: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:35 [DEBUG  ] bot: KXBTC-26MAY2913-B72550: parsed 6 no bids from 6 raw entries
+2026-05-29 12:09:35 [DEBUG  ] bot:   KXBTC-26MAY2913-B72550: skipping — thin/one-sided book (yes=0, no=6)
+2026-05-29 12:09:35 [DEBUG  ] bot:   KXETH: found 100 open markets
+2026-05-29 12:09:35 [DEBUG  ] bot: KXETH-26MAY2913-T2689.99: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:35 [DEBUG  ] bot: KXETH-26MAY2913-T2689.99: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:35 [DEBUG  ] bot:   KXETH-26MAY2913-T2689.99: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:35 [DEBUG  ] bot: KXETH-26MAY2913-T1230: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:35 [DEBUG  ] bot: KXETH-26MAY2913-T1230: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:35 [DEBUG  ] bot:   KXETH-26MAY2913-T1230: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:35 [DEBUG  ] bot: KXETH-26MAY2913-B2680: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:35 [DEBUG  ] bot: KXETH-26MAY2913-B2680: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:35 [DEBUG  ] bot:   KXETH-26MAY2913-B2680: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:35 [DEBUG  ] bot: KXETH-26MAY2913-B2660: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:35 [DEBUG  ] bot: KXETH-26MAY2913-B2660: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:35 [DEBUG  ] bot:   KXETH-26MAY2913-B2660: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:35 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.01s
+2026-05-29 12:09:35 [DEBUG  ] bot: KXETH-26MAY2913-B2640: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:35 [DEBUG  ] bot: KXETH-26MAY2913-B2640: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:35 [DEBUG  ] bot:   KXETH-26MAY2913-B2640: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:35 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.06s
+2026-05-29 12:09:35 [DEBUG  ] bot: KXETH-26MAY2913-B2620: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:35 [DEBUG  ] bot: KXETH-26MAY2913-B2620: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:35 [DEBUG  ] bot:   KXETH-26MAY2913-B2620: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:35 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.03s
+2026-05-29 12:09:36 [DEBUG  ] bot: KXETH-26MAY2913-B2600: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:36 [DEBUG  ] bot: KXETH-26MAY2913-B2600: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:36 [DEBUG  ] bot:   KXETH-26MAY2913-B2600: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:36 [DEBUG  ] bot: KXETH-26MAY2913-B2580: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:36 [DEBUG  ] bot: KXETH-26MAY2913-B2580: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:36 [DEBUG  ] bot:   KXETH-26MAY2913-B2580: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:36 [DEBUG  ] bot: KXETH-26MAY2913-B2560: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:36 [DEBUG  ] bot: KXETH-26MAY2913-B2560: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:36 [DEBUG  ] bot:   KXETH-26MAY2913-B2560: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:36 [DEBUG  ] bot: KXETH-26MAY2913-B2540: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:36 [DEBUG  ] bot: KXETH-26MAY2913-B2540: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:36 [DEBUG  ] bot:   KXETH-26MAY2913-B2540: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:36 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.00s
+2026-05-29 12:09:36 [DEBUG  ] bot: KXETH-26MAY2913-B2520: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:36 [DEBUG  ] bot: KXETH-26MAY2913-B2520: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:36 [DEBUG  ] bot:   KXETH-26MAY2913-B2520: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:36 [DEBUG  ] bot: KXETH-26MAY2913-B2500: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:36 [DEBUG  ] bot: KXETH-26MAY2913-B2500: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:36 [DEBUG  ] bot:   KXETH-26MAY2913-B2500: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:36 [DEBUG  ] bot: KXETH-26MAY2913-B2480: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:36 [DEBUG  ] bot: KXETH-26MAY2913-B2480: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:36 [DEBUG  ] bot:   KXETH-26MAY2913-B2480: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:36 [DEBUG  ] bot: KXETH-26MAY2913-B2460: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:36 [DEBUG  ] bot: KXETH-26MAY2913-B2460: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:36 [DEBUG  ] bot:   KXETH-26MAY2913-B2460: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:36 [DEBUG  ] bot: KXETH-26MAY2913-B2440: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:36 [DEBUG  ] bot: KXETH-26MAY2913-B2440: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:36 [DEBUG  ] bot:   KXETH-26MAY2913-B2440: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:36 [DEBUG  ] bot: KXETH-26MAY2913-B2420: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:36 [DEBUG  ] bot: KXETH-26MAY2913-B2420: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:36 [DEBUG  ] bot:   KXETH-26MAY2913-B2420: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:36 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.10s
+2026-05-29 12:09:37 [DEBUG  ] bot: KXETH-26MAY2913-B2400: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:37 [DEBUG  ] bot: KXETH-26MAY2913-B2400: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:37 [DEBUG  ] bot:   KXETH-26MAY2913-B2400: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:37 [DEBUG  ] bot: KXETH-26MAY2913-B2380: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:37 [DEBUG  ] bot: KXETH-26MAY2913-B2380: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:37 [DEBUG  ] bot:   KXETH-26MAY2913-B2380: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:37 [DEBUG  ] bot: KXETH-26MAY2913-B2360: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:37 [DEBUG  ] bot: KXETH-26MAY2913-B2360: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:37 [DEBUG  ] bot:   KXETH-26MAY2913-B2360: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:37 [DEBUG  ] bot: KXETH-26MAY2913-B2340: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:37 [DEBUG  ] bot: KXETH-26MAY2913-B2340: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:37 [DEBUG  ] bot:   KXETH-26MAY2913-B2340: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:37 [DEBUG  ] bot: KXETH-26MAY2913-B2320: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:37 [DEBUG  ] bot: KXETH-26MAY2913-B2320: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:37 [DEBUG  ] bot:   KXETH-26MAY2913-B2320: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:37 [DEBUG  ] bot: KXETH-26MAY2913-B2300: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:37 [DEBUG  ] bot: KXETH-26MAY2913-B2300: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:37 [DEBUG  ] bot:   KXETH-26MAY2913-B2300: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:37 [DEBUG  ] bot: KXETH-26MAY2913-B2280: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:37 [DEBUG  ] bot: KXETH-26MAY2913-B2280: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:37 [DEBUG  ] bot:   KXETH-26MAY2913-B2280: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:37 [DEBUG  ] bot: KXETH-26MAY2913-B2260: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:37 [DEBUG  ] bot: KXETH-26MAY2913-B2260: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:37 [DEBUG  ] bot:   KXETH-26MAY2913-B2260: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:37 [DEBUG  ] bot: KXETH-26MAY2913-B2240: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:37 [DEBUG  ] bot: KXETH-26MAY2913-B2240: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:37 [DEBUG  ] bot:   KXETH-26MAY2913-B2240: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:37 [DEBUG  ] bot: KXETH-26MAY2913-B2220: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:37 [DEBUG  ] bot: KXETH-26MAY2913-B2220: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:37 [DEBUG  ] bot:   KXETH-26MAY2913-B2220: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:37 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.09s
+2026-05-29 12:09:38 [DEBUG  ] bot: KXETH-26MAY2913-B2200: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:38 [DEBUG  ] bot: KXETH-26MAY2913-B2200: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:38 [DEBUG  ] bot:   KXETH-26MAY2913-B2200: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:38 [DEBUG  ] bot: KXETH-26MAY2913-B2180: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:38 [DEBUG  ] bot: KXETH-26MAY2913-B2180: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:38 [DEBUG  ] bot:   KXETH-26MAY2913-B2180: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:38 [DEBUG  ] bot: KXETH-26MAY2913-B2160: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:38 [DEBUG  ] bot: KXETH-26MAY2913-B2160: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:38 [DEBUG  ] bot:   KXETH-26MAY2913-B2160: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:38 [DEBUG  ] bot: KXETH-26MAY2913-B2140: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:38 [DEBUG  ] bot: KXETH-26MAY2913-B2140: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:38 [DEBUG  ] bot:   KXETH-26MAY2913-B2140: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:38 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.02s
+2026-05-29 12:09:38 [DEBUG  ] bot: KXETH-26MAY2913-B2120: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:38 [DEBUG  ] bot: KXETH-26MAY2913-B2120: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:38 [DEBUG  ] bot:   KXETH-26MAY2913-B2120: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:38 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.08s
+2026-05-29 12:09:38 [DEBUG  ] bot: KXETH-26MAY2913-B2100: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:38 [DEBUG  ] bot: KXETH-26MAY2913-B2100: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:38 [DEBUG  ] bot:   KXETH-26MAY2913-B2100: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:38 [DEBUG  ] bot: KXETH-26MAY2913-B2080: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:38 [DEBUG  ] bot: KXETH-26MAY2913-B2080: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:38 [DEBUG  ] bot:   KXETH-26MAY2913-B2080: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:38 [DEBUG  ] bot: KXETH-26MAY2913-B2060: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:38 [DEBUG  ] bot: KXETH-26MAY2913-B2060: parsed 2 yes bids from 2 raw entries
+2026-05-29 12:09:38 [DEBUG  ] bot: KXETH-26MAY2913-B2060: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:38 [DEBUG  ] bot: KXETH-26MAY2913-B2040: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:38 [DEBUG  ] bot: KXETH-26MAY2913-B2040: parsed 4 yes bids from 4 raw entries
+2026-05-29 12:09:38 [DEBUG  ] bot: KXETH-26MAY2913-B2040: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:38 [DEBUG  ] bot: KXETH-26MAY2913-B2020: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:38 [DEBUG  ] bot: KXETH-26MAY2913-B2020: parsed 4 yes bids from 4 raw entries
+2026-05-29 12:09:38 [DEBUG  ] bot: KXETH-26MAY2913-B2020: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:38 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.03s
+2026-05-29 12:09:39 [DEBUG  ] bot: KXETH-26MAY2913-B2000: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:39 [DEBUG  ] bot: KXETH-26MAY2913-B2000: parsed 1 yes bids from 1 raw entries
+2026-05-29 12:09:39 [DEBUG  ] bot: KXETH-26MAY2913-B2000: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:39 [DEBUG  ] bot: KXETH-26MAY2913-B1980: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:39 [DEBUG  ] bot: KXETH-26MAY2913-B1980: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:39 [DEBUG  ] bot:   KXETH-26MAY2913-B1980: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:39 [DEBUG  ] bot: KXETH-26MAY2913-B1960: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:39 [DEBUG  ] bot: KXETH-26MAY2913-B1960: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:39 [DEBUG  ] bot:   KXETH-26MAY2913-B1960: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:39 [DEBUG  ] bot: KXETH-26MAY2913-B1940: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:39 [DEBUG  ] bot: KXETH-26MAY2913-B1940: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:39 [DEBUG  ] bot:   KXETH-26MAY2913-B1940: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:39 [DEBUG  ] bot: KXETH-26MAY2913-B1920: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:39 [DEBUG  ] bot: KXETH-26MAY2913-B1920: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:39 [DEBUG  ] bot:   KXETH-26MAY2913-B1920: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:39 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.04s
+2026-05-29 12:09:39 [DEBUG  ] bot: KXETH-26MAY2913-B1900: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:39 [DEBUG  ] bot: KXETH-26MAY2913-B1900: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:39 [DEBUG  ] bot:   KXETH-26MAY2913-B1900: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:39 [DEBUG  ] bot: KXETH-26MAY2913-B1880: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:39 [DEBUG  ] bot: KXETH-26MAY2913-B1880: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:39 [DEBUG  ] bot:   KXETH-26MAY2913-B1880: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:39 [DEBUG  ] bot: KXETH-26MAY2913-B1860: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:39 [DEBUG  ] bot: KXETH-26MAY2913-B1860: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:39 [DEBUG  ] bot:   KXETH-26MAY2913-B1860: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:39 [DEBUG  ] bot: KXETH-26MAY2913-B1840: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:39 [DEBUG  ] bot: KXETH-26MAY2913-B1840: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:39 [DEBUG  ] bot:   KXETH-26MAY2913-B1840: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:40 [DEBUG  ] bot: KXETH-26MAY2913-B1820: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:40 [DEBUG  ] bot: KXETH-26MAY2913-B1820: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:40 [DEBUG  ] bot:   KXETH-26MAY2913-B1820: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:40 [DEBUG  ] bot: KXETH-26MAY2913-B1800: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:40 [DEBUG  ] bot: KXETH-26MAY2913-B1800: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:40 [DEBUG  ] bot:   KXETH-26MAY2913-B1800: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:40 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.02s
+2026-05-29 12:09:40 [DEBUG  ] bot: KXETH-26MAY2913-B1780: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:40 [DEBUG  ] bot: KXETH-26MAY2913-B1780: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:40 [DEBUG  ] bot:   KXETH-26MAY2913-B1780: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:40 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.00s
+2026-05-29 12:09:40 [DEBUG  ] bot: KXETH-26MAY2913-B1760: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:40 [DEBUG  ] bot: KXETH-26MAY2913-B1760: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:40 [DEBUG  ] bot:   KXETH-26MAY2913-B1760: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:40 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.02s
+2026-05-29 12:09:40 [DEBUG  ] bot: KXETH-26MAY2913-B1740: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:40 [DEBUG  ] bot: KXETH-26MAY2913-B1740: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:40 [DEBUG  ] bot:   KXETH-26MAY2913-B1740: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:40 [DEBUG  ] bot: KXETH-26MAY2913-B1720: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:40 [DEBUG  ] bot: KXETH-26MAY2913-B1720: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:40 [DEBUG  ] bot:   KXETH-26MAY2913-B1720: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:40 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.04s
+2026-05-29 12:09:40 [DEBUG  ] bot: KXETH-26MAY2913-B1700: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:40 [DEBUG  ] bot: KXETH-26MAY2913-B1700: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:40 [DEBUG  ] bot:   KXETH-26MAY2913-B1700: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:40 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.01s
+2026-05-29 12:09:40 [DEBUG  ] bot: KXETH-26MAY2913-B1680: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:40 [DEBUG  ] bot: KXETH-26MAY2913-B1680: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:40 [DEBUG  ] bot:   KXETH-26MAY2913-B1680: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:40 [DEBUG  ] bot: KXETH-26MAY2913-B1660: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:40 [DEBUG  ] bot: KXETH-26MAY2913-B1660: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:40 [DEBUG  ] bot:   KXETH-26MAY2913-B1660: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:40 [DEBUG  ] bot: KXETH-26MAY2913-B1640: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:40 [DEBUG  ] bot: KXETH-26MAY2913-B1640: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:40 [DEBUG  ] bot:   KXETH-26MAY2913-B1640: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:41 [DEBUG  ] bot: KXETH-26MAY2913-B1620: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:41 [DEBUG  ] bot: KXETH-26MAY2913-B1620: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:41 [DEBUG  ] bot:   KXETH-26MAY2913-B1620: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:41 [DEBUG  ] bot: KXETH-26MAY2913-B1600: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:41 [DEBUG  ] bot: KXETH-26MAY2913-B1600: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:41 [DEBUG  ] bot:   KXETH-26MAY2913-B1600: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:41 [DEBUG  ] bot: KXETH-26MAY2913-B1580: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:41 [DEBUG  ] bot: KXETH-26MAY2913-B1580: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:41 [DEBUG  ] bot:   KXETH-26MAY2913-B1580: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:41 [DEBUG  ] bot: KXETH-26MAY2913-B1560: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:41 [DEBUG  ] bot: KXETH-26MAY2913-B1560: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:41 [DEBUG  ] bot:   KXETH-26MAY2913-B1560: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:41 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.01s
+2026-05-29 12:09:41 [DEBUG  ] bot: KXETH-26MAY2913-B1540: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:41 [DEBUG  ] bot: KXETH-26MAY2913-B1540: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:41 [DEBUG  ] bot:   KXETH-26MAY2913-B1540: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:41 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.01s
+2026-05-29 12:09:41 [DEBUG  ] bot: KXETH-26MAY2913-B1520: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:41 [DEBUG  ] bot: KXETH-26MAY2913-B1520: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:41 [DEBUG  ] bot:   KXETH-26MAY2913-B1520: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:41 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.05s
+2026-05-29 12:09:41 [DEBUG  ] bot: KXETH-26MAY2913-B1500: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:41 [DEBUG  ] bot: KXETH-26MAY2913-B1500: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:41 [DEBUG  ] bot:   KXETH-26MAY2913-B1500: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:41 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.07s
+2026-05-29 12:09:41 [DEBUG  ] bot: KXETH-26MAY2913-B1480: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:41 [DEBUG  ] bot: KXETH-26MAY2913-B1480: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:41 [DEBUG  ] bot:   KXETH-26MAY2913-B1480: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:41 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.00s
+2026-05-29 12:09:41 [DEBUG  ] bot: KXETH-26MAY2913-B1460: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:41 [DEBUG  ] bot: KXETH-26MAY2913-B1460: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:41 [DEBUG  ] bot:   KXETH-26MAY2913-B1460: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:42 [DEBUG  ] bot: KXETH-26MAY2913-B1440: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:42 [DEBUG  ] bot: KXETH-26MAY2913-B1440: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:42 [DEBUG  ] bot:   KXETH-26MAY2913-B1440: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:42 [DEBUG  ] bot: KXETH-26MAY2913-B1420: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:42 [DEBUG  ] bot: KXETH-26MAY2913-B1420: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:42 [DEBUG  ] bot:   KXETH-26MAY2913-B1420: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:42 [DEBUG  ] bot: KXETH-26MAY2913-B1400: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:42 [DEBUG  ] bot: KXETH-26MAY2913-B1400: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:42 [DEBUG  ] bot:   KXETH-26MAY2913-B1400: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:42 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.06s
+2026-05-29 12:09:42 [DEBUG  ] bot: KXETH-26MAY2913-B1380: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:42 [DEBUG  ] bot: KXETH-26MAY2913-B1380: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:42 [DEBUG  ] bot:   KXETH-26MAY2913-B1380: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:42 [DEBUG  ] bot: KXETH-26MAY2913-B1360: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:42 [DEBUG  ] bot: KXETH-26MAY2913-B1360: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:42 [DEBUG  ] bot:   KXETH-26MAY2913-B1360: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:42 [DEBUG  ] bot: KXETH-26MAY2913-B1340: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:42 [DEBUG  ] bot: KXETH-26MAY2913-B1340: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:42 [DEBUG  ] bot:   KXETH-26MAY2913-B1340: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:42 [DEBUG  ] bot: KXETH-26MAY2913-B1320: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:42 [DEBUG  ] bot: KXETH-26MAY2913-B1320: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:42 [DEBUG  ] bot:   KXETH-26MAY2913-B1320: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:42 [DEBUG  ] bot: KXETH-26MAY2913-B1300: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:42 [DEBUG  ] bot: KXETH-26MAY2913-B1300: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:42 [DEBUG  ] bot:   KXETH-26MAY2913-B1300: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:42 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.06s
+2026-05-29 12:09:42 [DEBUG  ] bot: KXETH-26MAY2913-B1280: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:42 [DEBUG  ] bot: KXETH-26MAY2913-B1280: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:42 [DEBUG  ] bot:   KXETH-26MAY2913-B1280: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:42 [DEBUG  ] bot: KXETH-26MAY2913-B1260: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:42 [DEBUG  ] bot: KXETH-26MAY2913-B1260: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:42 [DEBUG  ] bot:   KXETH-26MAY2913-B1260: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:42 [DEBUG  ] bot: KXETH-26MAY2913-B1240: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:42 [DEBUG  ] bot: KXETH-26MAY2913-B1240: parsed 8 no bids from 8 raw entries
+2026-05-29 12:09:42 [DEBUG  ] bot:   KXETH-26MAY2913-B1240: skipping — thin/one-sided book (yes=0, no=8)
+2026-05-29 12:09:42 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.01s
+2026-05-29 12:09:43 [DEBUG  ] bot: KXETH-26MAY2917-T3059.99: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:43 [DEBUG  ] bot: KXETH-26MAY2917-T3059.99: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:43 [DEBUG  ] bot:   KXETH-26MAY2917-T3059.99: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:43 [DEBUG  ] bot: KXETH-26MAY2917-T1140: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:43 [DEBUG  ] bot: KXETH-26MAY2917-T1140: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:43 [DEBUG  ] bot:   KXETH-26MAY2917-T1140: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:43 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.05s
+2026-05-29 12:09:43 [DEBUG  ] bot: KXETH-26MAY2917-B3040: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:43 [DEBUG  ] bot: KXETH-26MAY2917-B3040: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:43 [DEBUG  ] bot:   KXETH-26MAY2917-B3040: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:43 [DEBUG  ] bot: KXETH-26MAY2917-B3000: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:43 [DEBUG  ] bot: KXETH-26MAY2917-B3000: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:43 [DEBUG  ] bot:   KXETH-26MAY2917-B3000: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:43 [DEBUG  ] bot: KXETH-26MAY2917-B2960: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:43 [DEBUG  ] bot: KXETH-26MAY2917-B2960: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:43 [DEBUG  ] bot:   KXETH-26MAY2917-B2960: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:43 [DEBUG  ] bot: KXETH-26MAY2917-B2920: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:43 [DEBUG  ] bot: KXETH-26MAY2917-B2920: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:43 [DEBUG  ] bot:   KXETH-26MAY2917-B2920: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:43 [DEBUG  ] bot: KXETH-26MAY2917-B2880: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:43 [DEBUG  ] bot: KXETH-26MAY2917-B2880: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:43 [DEBUG  ] bot:   KXETH-26MAY2917-B2880: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:43 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.04s
+2026-05-29 12:09:43 [DEBUG  ] bot: KXETH-26MAY2917-B2840: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:43 [DEBUG  ] bot: KXETH-26MAY2917-B2840: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:43 [DEBUG  ] bot:   KXETH-26MAY2917-B2840: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:43 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.01s
+2026-05-29 12:09:43 [DEBUG  ] bot: KXETH-26MAY2917-B2800: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:43 [DEBUG  ] bot: KXETH-26MAY2917-B2800: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:43 [DEBUG  ] bot:   KXETH-26MAY2917-B2800: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:43 [DEBUG  ] bot: KXETH-26MAY2917-B2760: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:43 [DEBUG  ] bot: KXETH-26MAY2917-B2760: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:43 [DEBUG  ] bot:   KXETH-26MAY2917-B2760: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:43 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.01s
+2026-05-29 12:09:44 [DEBUG  ] bot: KXETH-26MAY2917-B2720: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:44 [DEBUG  ] bot: KXETH-26MAY2917-B2720: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:44 [DEBUG  ] bot:   KXETH-26MAY2917-B2720: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:44 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.00s
+2026-05-29 12:09:44 [DEBUG  ] bot: KXETH-26MAY2917-B2680: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:44 [DEBUG  ] bot: KXETH-26MAY2917-B2680: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:44 [DEBUG  ] bot:   KXETH-26MAY2917-B2680: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:44 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.04s
+2026-05-29 12:09:44 [DEBUG  ] bot: KXETH-26MAY2917-B2640: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:44 [DEBUG  ] bot: KXETH-26MAY2917-B2640: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:44 [DEBUG  ] bot:   KXETH-26MAY2917-B2640: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:44 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.01s
+2026-05-29 12:09:44 [DEBUG  ] bot: KXETH-26MAY2917-B2600: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:44 [DEBUG  ] bot: KXETH-26MAY2917-B2600: parsed 9 no bids from 9 raw entries
+2026-05-29 12:09:44 [DEBUG  ] bot:   KXETH-26MAY2917-B2600: skipping — thin/one-sided book (yes=0, no=9)
+2026-05-29 12:09:44 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.01s
+2026-05-29 12:09:44 [DEBUG  ] bot: KXETH-26MAY2917-B2560: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:44 [DEBUG  ] bot: KXETH-26MAY2917-B2560: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:44 [DEBUG  ] bot:   KXETH-26MAY2917-B2560: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:44 [DEBUG  ] bot: KXETH-26MAY2917-B2520: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:44 [DEBUG  ] bot: KXETH-26MAY2917-B2520: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:44 [DEBUG  ] bot:   KXETH-26MAY2917-B2520: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:44 [DEBUG  ] bot: KXETH-26MAY2917-B2480: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:44 [DEBUG  ] bot: KXETH-26MAY2917-B2480: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:44 [DEBUG  ] bot:   KXETH-26MAY2917-B2480: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:44 [DEBUG  ] kalshi_client: Rate limiter: sleeping 0.01s
+2026-05-29 12:09:44 [DEBUG  ] bot: KXETH-26MAY2917-B2440: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:44 [DEBUG  ] bot: KXETH-26MAY2917-B2440: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:44 [DEBUG  ] bot:   KXETH-26MAY2917-B2440: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:45 [DEBUG  ] bot: KXETH-26MAY2917-B2400: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:45 [DEBUG  ] bot: KXETH-26MAY2917-B2400: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:45 [DEBUG  ] bot:   KXETH-26MAY2917-B2400: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:45 [DEBUG  ] bot: KXETH-26MAY2917-B2360: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:45 [DEBUG  ] bot: KXETH-26MAY2917-B2360: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:45 [DEBUG  ] bot:   KXETH-26MAY2917-B2360: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:45 [DEBUG  ] bot: KXETH-26MAY2917-B2320: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:45 [DEBUG  ] bot: KXETH-26MAY2917-B2320: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:45 [DEBUG  ] bot:   KXETH-26MAY2917-B2320: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:45 [DEBUG  ] bot: KXETH-26MAY2917-B2280: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:45 [DEBUG  ] bot: KXETH-26MAY2917-B2280: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:45 [DEBUG  ] bot:   KXETH-26MAY2917-B2280: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:45 [DEBUG  ] bot: KXETH-26MAY2917-B2240: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:45 [DEBUG  ] bot: KXETH-26MAY2917-B2240: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:45 [DEBUG  ] bot:   KXETH-26MAY2917-B2240: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:45 [DEBUG  ] bot: KXETH-26MAY2917-B2200: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:45 [DEBUG  ] bot: KXETH-26MAY2917-B2200: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:45 [DEBUG  ] bot:   KXETH-26MAY2917-B2200: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:45 [DEBUG  ] bot: KXETH-26MAY2917-B2160: orderbook keys=['no_dollars', 'yes_dollars']
+2026-05-29 12:09:45 [DEBUG  ] bot: KXETH-26MAY2917-B2160: parsed 10 no bids from 10 raw entries
+2026-05-29 12:09:45 [DEBUG  ] bot:   KXETH-26MAY2917-B2160: skipping — thin/one-sided book (yes=0, no=10)
+2026-05-29 12:09:45 [INFO   ] bot: Found 0 target markets out of 200 scanned across 2 series
+2026-05-29 12:09:45 [DEBUG  ] bot: Capital: Fractional Kelly (α=0.25) f=0.194, manual=0.5, using=0.194, budget=1937¢
+2026-05-29 12:09:45 [DEBUG  ] bot: Loop complete: 0 target markets | Active hedges: 0 | Completed: 0 | Orders placed: 0 | Net P&L: 0¢ | MDD: 0.0% | PF: 0.00 | SR: 0.00
+2026-05-29 12:09:45 [DEBUG  ] bot: Capital: Fractional Kelly (α=0.25) f=0.194, manual=0.5, using=0.194, budget=1937¢
+2026-05-29 12:09:45 [DEBUG  ] bot: Loop complete: 0 target markets | Active hedges: 0 | Completed: 0 | Orders placed: 0 | Net P&L: 0¢ | MDD: 0.0% | PF: 0.00 | SR: 0.00
+2026-05-29 12:09:49 [INFO   ] bot: Shutdown signal received, cleaning up...
+2026-05-29 12:09:50 [INFO   ] bot: Cleaning up active orders...
+2026-05-29 12:09:50 [INFO   ] bot: 
+============================================================
+  Bot Performance Summary
+============================================================
+  Runtime:            0.0 hours
+  Orders placed:      0
+  Orders cancelled:   0
+  Hedges completed:   0
+  Hedges failed:      0
+  Hedge success rate: 0.0%
+  Partial fills:      0
+  Contracts hedged:   0
+  Contracts exposed:  0
+  Total reward score: 0.00
+  Hedge P&L:          0¢ ($0.00)
+  Unhedged losses:    0¢ ($0.00)
+  ── Net P&L:         0¢ ($0.00) ──
+  Reprices attempted: 0
+  Skipped (thin):     187
+  Skipped (no edge):  0
+────────────────────────────────────────────────────────────
+  RISK METRICS
+────────────────────────────────────────────────────────────
+  Max Drawdown:       0.0% (limit: 8%)
+  Sharpe Ratio:       0.00 (target: >2.0)
+  Profit Factor:      0.00 (healthy: >1.5)
+  VaR (95%):          0¢ ($0.00)
+  Gross Profit:       0¢
+  Gross Loss:         0¢
+  Risk Halted:        No
+============================================================
+
+2026-05-29 12:09:50 [INFO   ] main: Bot stopped.
+2026-05-29 12:28:36 [WARNING] main: ============================================================
+2026-05-29 12:28:37 [WARNING] main:   ⚠  PRODUCTION MODE — REAL MONEY AT RISK  ⚠
+2026-05-29 12:28:37 [WARNING] main: ============================================================
+2026-05-29 12:28:39 [INFO   ] main: Starting bot...
+2026-05-29 12:28:39 [INFO   ] bot: ============================================================
+2026-05-29 12:28:39 [INFO   ] bot:   OPTIMUS v3 — Hedged Liquidity Bot + Risk Engine
+2026-05-29 12:28:39 [INFO   ] bot: ============================================================
+2026-05-29 12:28:39 [INFO   ] bot:   Mode:        LIVE
+2026-05-29 12:28:39 [INFO   ] bot:   Environment: https://api.elections.kalshi.com
+2026-05-29 12:28:39 [INFO   ] bot:   Budget:      9800¢ ($98.00)
+2026-05-29 12:28:39 [INFO   ] bot:   Δ_max:       2¢
+2026-05-29 12:28:39 [INFO   ] bot:   Kelly α:     0.25 (fractional)
+2026-05-29 12:28:39 [INFO   ] bot:   Max Expose:  4000¢ ($40.00)
+2026-05-29 12:28:39 [INFO   ] bot:   Poll:        3.0s
+2026-05-29 12:28:39 [INFO   ] bot:   MDD Limit:   8%
+2026-05-29 12:28:39 [INFO   ] bot:   VaR Limit:   1500¢/day
+2026-05-29 12:28:39 [INFO   ] bot:   Loss Halt:   2 consecutive
+2026-05-29 12:28:39 [INFO   ] bot:   Series:      KXBTC, KXETH, KXINX, KXNASDAQ100, KXSPY, KXGOLD
+2026-05-29 12:28:39 [INFO   ] bot:   Mode:        Auto-discover best markets
+2026-05-29 12:28:39 [INFO   ] bot: ============================================================
+2026-05-29 12:28:40 [INFO   ] bot:   Account balance: 4021¢ ($40.21)
+2026-05-29 12:28:40 [INFO   ] bot: Scanning markets across series: KXBTC, KXETH, KXINX, KXNASDAQ100, KXSPY, KXGOLD
+2026-05-29 12:29:07 [INFO   ] bot: Found 0 target markets out of 260 scanned across 6 series
+2026-05-29 12:32:33 [INFO   ] bot: Shutdown signal received, cleaning up...
+2026-05-29 12:32:34 [INFO   ] bot: Cleaning up active orders...
+2026-05-29 12:32:34 [INFO   ] bot: 
+============================================================
+  Bot Performance Summary
+============================================================
+  Runtime:            0.1 hours
+  Orders placed:      0
+  Orders cancelled:   0
+  Hedges completed:   0
+  Hedges failed:      0
+  Hedge success rate: 0.0%
+  Partial fills:      0
+  Contracts hedged:   0
+  Contracts exposed:  0
+  Total reward score: 0.00
+  Hedge P&L:          0¢ ($0.00)
+  Unhedged losses:    0¢ ($0.00)
+  ── Net P&L:         0¢ ($0.00) ──
+  Reprices attempted: 0
+  Skipped (thin):     236
+  Skipped (no edge):  0
+────────────────────────────────────────────────────────────
+  RISK METRICS
+────────────────────────────────────────────────────────────
+  Max Drawdown:       0.0% (limit: 8%)
+  Sharpe Ratio:       0.00 (target: >2.0)
+  Profit Factor:      0.00 (healthy: >1.5)
+  VaR (95%):          0¢ ($0.00)
+  Gross Profit:       0¢
+  Gross Loss:         0¢
+  Risk Halted:        No
+============================================================
+
+2026-05-29 12:32:34 [INFO   ] main: Bot stopped.
+2026-06-27 16:55:20 [ERROR  ] main: No API key ID provided. Set KALSHI_API_KEY_ID env var or use --key-id
